@@ -1,5 +1,5 @@
-const ORDER_ASC_BY_COST = "AZ";
-const ORDER_DESC_BY_COST = "ZA";
+const ORDER_ASC_BY_COST = "0amax";
+const ORDER_DESC_BY_COST = "maxa0";
 const ORDER_BY_PROD_COUNT = "Cant.";
 var currentProductsArray = [];
 var currentSortCriteria = undefined;
