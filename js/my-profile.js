@@ -16,3 +16,18 @@ else {
 document.addEventListener("DOMContentLoaded", function (e) {
 
 });
+
+function guardarTodo() {
+
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let edad = document.getElementById("edad").value;
+    let correo = document.getElementById("correo").value;
+    let direccion = document.getElementById("direccion").value;
+
+    let datos = JSON.stringify({ "nombre": nombre, "apellido": apellido, "edad": edad, "correo": correo, "direccion": direccion })
+
+    localStorage.setItem('Datos', datos);
+
+
+}

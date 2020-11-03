@@ -144,10 +144,10 @@ function validar() {
   }
   else if (tarjetadecredito.checked) {
     if (titular.value.trim() == "") {
-      alert("Debe ingresar Nombre")
+      alert("Debe ingresar nombre")
     }
     else if (numerotarjeta.value.trim() == "") {
-      alert("Debe ingresar numero de tarjeta")
+      alert("Debe ingresar número de tarjeta")
     }
     else if (cvv.value.trim() == "") {
       alert("Debe ingresar CVV")
@@ -162,9 +162,38 @@ function validar() {
   return true
 }
 
+function validarcampos() {
+  let goldradio = (document.getElementById("goldradio"));
+  let premiumradio = (document.getElementById("premiumradio"));
+  let standardradio = (document.getElementById("standardradio"));
+  let calle = (document.getElementById("calle"));
+  let numero = (document.getElementById("numero"));
+  let esquina = (document.getElementById("esquina"));
+  if (!(goldradio.checked) && !(premiumradio.checked) && !(standardradio.checked)) {
+    alert("Debe seleccionar un tipo de envio")
+  }
+  else if (goldradio.checked || premiumradio.checked || standardradio.checked) {
+    if (calle.value.trim() == "") {
+      alert("Debe ingresar calle")
+    }
+    else if (numero.value.trim() == "") {
+      alert("Debe ingresar número")
+    }
+    else if (esquina.value.trim() == "") {
+      alert("Debe ingresar esquina")
+    }
+
+  } 
+  return true
+}
+
+
 
 function finalizarCompra() {
-  if (validar() && validarenvio()) {
+  if (validar() && validarcampos()) {
     alert(mensaje)
+  }
+  else if (!validar() && (!validarcampos)) {
+    alert("No se puede realizar la compra")
   }
 }
