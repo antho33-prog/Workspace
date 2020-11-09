@@ -42,8 +42,10 @@ var getJSONData = function(url){
     });
 }
 
+//funcion para cerrar sesion de usuario//
+
 function cerrarsesion(){
-  sessionStorage.removeItem("user");
+  localStorage.removeItem("user");
 location.href = "index.html"
 }
 
@@ -51,7 +53,7 @@ location.href = "index.html"
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-document.getElementById("usuario").innerHTML = sessionStorage.getItem("user");
+document.getElementById("usuario").innerHTML = localStorage.getItem("user");
 
 
 });

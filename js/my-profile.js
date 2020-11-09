@@ -14,20 +14,42 @@ else {
     '<a href ="index.html class="py-2 d-none d-md-inline-block" href="#" id = "usuario"> Iniciar sesión </a>';
 }
 document.addEventListener("DOMContentLoaded", function (e) {
+//funcion para que los datos se muestren al cerrar/cambiar de pestaña//
+    if (localStorage.getItem("Datos") != null) {
+        var perfil = JSON.parse(localStorage.getItem("Datos"))
+        document.getElementById("mostrarnombre").value = perfil.nombre;
+        document.getElementById("mostrarapellido").value = perfil.apellido;
+        document.getElementById("mostraredad").value = perfil.edad;
+        document.getElementById("mostrartelefono").value = perfil.telefono;
+        document.getElementById("mostrarcorreo").value = perfil.correo;
+        document.getElementById("mostrardireccion").value = perfil.direccion;
+    }
+
 
 });
+
+//funcion donde guardo los datos al editar el perfil para que luego sean mostrados//
 
 function guardarTodo() {
 
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let edad = document.getElementById("edad").value;
+    let telefono = document.getElementById("telefono").value;
     let correo = document.getElementById("correo").value;
     let direccion = document.getElementById("direccion").value;
 
-    let datos = JSON.stringify({ "nombre": nombre, "apellido": apellido, "edad": edad, "correo": correo, "direccion": direccion })
+    let datos = {"nombre": nombre, "apellido": apellido, "edad": edad, "telefono": telefono, "correo": correo, "direccion": direccion}
 
-    localStorage.setItem('Datos', datos);
+    localStorage.setItem('Datos', JSON.stringify(datos));
 
-
+//recupero datos guardados y los muestro//
+    var dpersonales = JSON.parse(localStorage.getItem('Datos'));
+        document.getElementById("mostrarnombre").value = dpersonales.nombre;
+        document.getElementById("mostrarapellido").value = dpersonales.apellido;
+        document.getElementById("mostraredad").value = dpersonales.edad;
+        document.getElementById("mostrartelefono").value = dpersonales.telefono;
+        document.getElementById("mostrarcorreo").value = dpersonales.correo;
+        document.getElementById("mostrardireccion").value = dpersonales.direccion;
 }
+

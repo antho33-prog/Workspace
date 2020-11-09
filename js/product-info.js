@@ -17,11 +17,11 @@ function showImagesGallery(array){
         </div>
         `
 
-        //document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;//
+
     }
 }
 
-//funcion productos relacionados//
+//funcion ver productos relacionados//
 
 function showRelatedProducts(array){
     getJSONData(PRODUCTS_URL).then(function(resultObj) { 
@@ -55,7 +55,7 @@ function showRelatedProducts(array){
     });
 };
 
-//funcion comentarios//
+//funcion mostrar comentarios//
 
 function showComents(array) {
     let htmlContentToAppend = "";
@@ -91,7 +91,7 @@ function showComents(array) {
     }   
 }
 
-
+//funcion nuevo comentario//
 
 function nuevocomentario() {
     let contenido = document.getElementById("nuevocomentario").value;
@@ -107,21 +107,21 @@ function nuevocomentario() {
             estrellas += `<i class="fa fa-star"> </i>`
         }
 
- htmlContentToAppend = `
+htmlContentToAppend = `
     
- <div class="list-group">
- <div class="d-flex flex-row comment-row m-t-0">
-     <div class="comment-text w-100">
-         <h6 class="font-weight-bold">${usuarios}</h6>
-         <div id="rating"> ${estrellas} </div>
-         <span class="m-b-15 d-block">${contenido}</span>
-     <div class="comment-footer">
-         <span class="text-muted float-right"></span>
-     </div>
-     </div>
- </div>
- <br>
- `    
+<div class="list-group">
+<div class="d-flex flex-row comment-row m-t-0">
+    <div class="comment-text w-100">
+    <h6 class="font-weight-bold">${usuarios}</h6>
+    <div id="rating"> ${estrellas} </div>
+    <span class="m-b-15 d-block">${contenido}</span>
+    <div class="comment-footer">
+    <span class="text-muted float-right"></span>
+    </div>
+    </div>
+</div>
+<br>
+`    
 
             document.getElementById("ListaDeComentarios").innerHTML += htmlContentToAppend;       
         }
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             productCurrencyHTML.innerHTML = product.currency;
             productSoldCountHTML.innerHTML = product.soldCount;
 
-            //Muestro las imagenes en forma de galería
+            //Muestro las imagenes en forma de galería//
             showImagesGallery(product.images);
             
             showRelatedProducts(product.relatedProducts);

@@ -41,8 +41,20 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+
+  <div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" id="usuario" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="cart.html">Mi carrito</a>
+    <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+    <a class="dropdown-item" onclick="cerrarsesion()">Cerrar sesion</a>
+  </div>
+</div>
+
     </div>
-  </nav>
+ </nav>
   <div class="container p-5">
     <!--<div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">¡A trabajar! :)</h4>
@@ -61,18 +73,23 @@
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="nombres">Nombres:</label>
-          <input id="nombre" class="form-control" type="text" disabled placeholder="Ingresa tu nombre completo" name="nombre">
+          <input id="mostrarnombre" class="form-control" type="text" disabled placeholder="Ingresa tu nombre completo" name="nombre">
         </div>
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="apellido">Apellidos:</label>
-          <input id="apellido" class="form-control" type="text" disabled placeholder="Ingresa tu apellido completo"
+          <input id="mostrarapellido" class="form-control" type="text" disabled placeholder="Ingresa tu apellido completo"
             name="apellido">
         </div>
 
-        <div class="form-group col-md-2 col-sm-12">
+        <div class="form-group col-md-3 col-sm-12">
           <label for="edad">Edad:</label>
-          <input id="edad" class="form-control" type="text" disabled placeholder="Ingresa tu edad" name="edad">
+          <input id="mostraredad" class="form-control" type="text" disabled placeholder="Ingresa tu edad" name="edad">
+        </div>
+
+        <div class="form-group col-md-3 col-sm-12">
+          <label for="telefono">Telefono:</label>
+          <input id="mostrartelefono" class="form-control" type="text" disabled placeholder="Ingresa tu número de contacto" name="telefono">
         </div>
 
       </div>
@@ -81,12 +98,12 @@
       
         <div class="form-group col-md-6 col-sm-12">
           <label for="correo">Correo electrónico:</label>
-          <input id="correo" class="form-control" type="text" disabled placeholder="Ingresa tu correo electronico (example@example.xxx)" name="correo">
+          <input id="mostrarcorreo" class="form-control" type="text" disabled placeholder="Ingresa tu correo electronico (example@example.xxx)" name="correo">
         </div>
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="dirección">Dirección:</label>
-          <input id="direccion" class="form-control" type="text" disabled placeholder="Ingresa tu dirección" name="direccion">
+          <input id="mostrardireccion" class="form-control" type="text" disabled placeholder="Ingresa tu dirección" name="direccion">
         </div>
       </div>
 
@@ -119,18 +136,23 @@
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="nombres">Nombres:</label>
-          <input id="nombre" class="form-control" type="text" id="nombre" placeholder="Ingresa tu nombre completo" name="nombre">
+          <input id="nombre" class="form-control" type="text"placeholder="Ingresa tu nombre completo" name="nombre">
         </div>
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="apellido">Apellidos:</label>
-          <input id="apellido" class="form-control" type="text" id="apellido" placeholder="Ingresa tu apellido completo"
+          <input id="apellido" class="form-control" type="text" placeholder="Ingresa tu apellido completo"
             name="apellido">
         </div>
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="edad">Edad:</label>
-          <input id="edad" class="form-control" type="text" id="edad" placeholder="Ingresa tu edad" name="edad">
+          <input id="edad" class="form-control" type="text" placeholder="Ingresa tu edad" name="edad">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="edad">Télefono:</label>
+          <input id="telefono" class="form-control" type="text" placeholder="Ingresa tu edad" name="telefono">
         </div>
 
       </div>
@@ -139,12 +161,12 @@
       
         <div class="form-group col-md-6 col-sm-12">
           <label for="correo">Correo electrónico:</label>
-          <input id="correo" class="form-control" type="text" id="correo" placeholder="Ingresa tu correo electronico (example@example.xxx)" name="correo">
+          <input id="correo" class="form-control" type="text" placeholder="Ingresa tu correo electronico (example@example.xxx)" name="correo">
         </div>
 
         <div class="form-group col-md-6 col-sm-12">
           <label for="dirección">Dirección:</label>
-          <input id="direccion" class="form-control" type="text" id="direccion" placeholder="Ingresa tu dirección" name="direccion">
+          <input id="direccion" class="form-control" type="text" placeholder="Ingresa tu dirección" name="direccion">
         </div>
       </div>
 

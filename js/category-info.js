@@ -1,5 +1,7 @@
 var category = {};
 
+//funcion que muestra la galeria de imagenes//
+
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";

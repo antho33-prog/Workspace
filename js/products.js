@@ -35,6 +35,8 @@ function sortProducts(criteria, array){
     return result;
 }
 
+//funcion para mostrar el listado de productos//
+
 function showProductsList(){
 
     let htmlContentToAppend = "";
@@ -82,7 +84,7 @@ function sortAndShowProducts(sortCriteria, productsArray){
 
     currentProductsArray = sortProducts(currentSortCriteria, currentProductsArray);
 
-    //Muestro las categorías ordenadas
+    //Muestro las categorías ordenadas//
     showProductsList();
 }
 
